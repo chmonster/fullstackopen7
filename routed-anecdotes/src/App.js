@@ -62,9 +62,13 @@ const About = () => (
 const Footer = () => (
   <div>
     <br />
-    Anecdote app for <a href='https://fullstackopen.com/'>Full Stack Open</a>.
+    Anecdote app for <a href='https://fullstackopen.com/en/'>Full Stack Open</a>.
 
-    See <a href='https://github.com/fullstack-hy2020/routed-anecdotes/blob/master/src/App.js'>https://github.com/fullstack-hy2020/routed-anecdotes/blob/master/src/App.js</a> for the source code.
+    See <br />
+    <a href='https://github.com/chmonster/fullstackopen7/blob/master/routed-anecdotes/src/App.js'>
+      https://github.com/chmonster/fullstackopen7/blob/master/routed-anecdotes/src/App.js
+    </a> 
+    <br />for the source code.
   </div>
 )
 
@@ -86,13 +90,12 @@ const Notification = (props) => {
 }
 
 const CreateNew = (props) => {
-  //const [content, setContent] = useState('')
-  //const [author, setAuthor] = useState('')
-  //const [info, setInfo] = useState('')
 
-  const content = useField('text')
-  const author = useField('text')
-  const info = useField('text')
+  const { reset: resetContent, ...content } = useField('text')
+  const { reset: resetAuthor, ...author } = useField('text')
+  const { reset: resetInfo, ...info } = useField('text')
+  
+  //console.log('createnew', resetContent, content)
 
   const navigate = useNavigate()
 
@@ -104,9 +107,18 @@ const CreateNew = (props) => {
       info: info.value,
       votes: 0
     })
-    console.log(props)
+    //console.log(props)
     navigate('/')
   }
+
+  const resetAll = (e) => {
+    e.preventDefault()
+    resetContent()
+    resetAuthor()
+    resetInfo()
+  }
+
+  //console.log(...content.delete('reset'))
 
   return (
     <div>
@@ -125,6 +137,7 @@ const CreateNew = (props) => {
           <input { ...info } />
         </div>
         <button>create</button>
+        <button onClick={resetAll}>reset</button>
       </form>
     </div>
   )
