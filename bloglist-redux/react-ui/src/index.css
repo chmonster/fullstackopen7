@@ -1,0 +1,72 @@
+.error {
+  color: red;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.confirm {
+  color: blue;
+  background: lightgrey;
+  font-size: 20px;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ul {
+  width: 25%;
+  text-align: left;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+togglable {
+  justify-content: 'center';
+}
+
+.loginform {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.blog {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.user {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.menu {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
